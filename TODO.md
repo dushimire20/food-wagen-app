@@ -1,0 +1,18 @@
+- [x] Create app/types/food.ts for TypeScript interfaces
+- [x] Create app/services/api.ts for API functions (GET, POST, PUT, DELETE, filter)
+- [x] Update app/components/FeaturedMeals.tsx: Replace static data with API fetch, add modals, animations, loading states
+- [x] Update app/components/Hero.tsx: Make search functional (client-side filter)
+- [x] Update app/components/Navbar.tsx: Add modal trigger for "Add meal"
+- [x] Create app/components/AddFoodModal.tsx: Form with validation, error messages
+- [x] Create app/components/EditFoodModal.tsx: Form with pre-filled data, validation
+- [x] Create app/components/DeleteFoodModal.tsx: Confirmation modal
+- [x] Update app/page.tsx: Add global state for foods, search, modals
+- [x] Update app/globals.css: Add .food- classes, animations (slide-up, hover)
+- [x] Add empty states and responsive design checks
+- [x] Write tests for 3 scenarios: component rendering, user interaction, API mocking
+- [x] Test deployment readiness (Vercel/Netlify)
+- [ ] Fix Next.js client/server component issues for event handlers
+- [ ] Connect Navbar "Add meal" button to modal in page component
+- [ ] Ensure all modals work correctly
+- [ ] Add proper error handling and loading states
+- [ ] Test full CRUD functionality
