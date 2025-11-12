@@ -1,26 +1,119 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+html,
+body,
+#root,
+.app {
+	height: 100%;
+	width: 100%;
+	align-items: center;
+	font-family: "Poppins", sans-serif;
+	@apply text-[#0F0D15];
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html {
+	scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@theme {
+	--color-primary-100: #FFFFFF;
+  --color-primary-200: #FFAE004A;
+	--color-secondary-100: #27374d;
+	--color-secondary-200:#526D82;
+  --color-secondary-300: #F17228;
+	--color-accent-100: #FF7A7A;
+  --color-accent-200: #F65900;
+  --color-accent-300: #FFBA26;
+  --color-accent-400: #FF9A0E;
+  --color-green: #79B93C33;
+
+
+}
+
+@keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.animate-fade-in-up {
+	animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@layer utilities {
+  .fade-in {
+    @apply opacity-0 transition-opacity duration-1000;
+  }
+
+  .fade-in.show {
+    @apply opacity-100;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 300ms ease-out forwards;
+  }
+
+  .empty-state-message {
+    @apply text-gray-500 text-lg;
+  }
+
+  .food-hero {
+    /* Custom styles for hero section */
+  }
+
+  .food-input {
+    /* Custom styles for inputs */
+  }
+
+  .food-btn {
+    /* Custom styles for buttons */
+  }
+
+  .food-name {
+    /* Custom styles for food name */
+  }
+
+  .food-price {
+    /* Custom styles for food price */
+  }
+
+  .food-rating {
+    /* Custom styles for food rating */
+  }
+
+  .restaurant-name {
+    /* Custom styles for restaurant name */
+  }
+
+  .restaurant-status {
+    /* Custom styles for restaurant status */
+  }
+
+  .restaurant-logo {
+    /* Custom styles for restaurant logo */
+  }
+
+  .food-card {
+    /* Custom styles for food card */
+  }
+
+  .food-footer {
+    /* Custom styles for footer */
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
